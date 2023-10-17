@@ -1,0 +1,250 @@
+
+body{
+	display: flex;
+	align-items: center;
+	min-height: center;
+	background: #4d055f;
+}
+
+.burbujas div {
+	background: rgb(253, 225, 191);
+	border-radius: 100%;
+	position: absolute;
+	bottom: 0;
+	animation: animarburbujas 4s linear infinite;
+}
+
+.burbujas div:nth-child(1){
+	width: 50px;
+	height: 45px;
+	left: 40px;
+	animation-duration: 4s;
+}
+
+.burbujas div:nth-child(2){
+	width: 60px;
+	height: 55px;
+	left: 25%;
+	animation-duration: 8s;
+}
+
+.burbujas div:nth-child(3){
+	width: 30px;
+	height: 27px;
+	left: 40%;
+	animation-duration: 5s;
+}
+
+.burbujas div:nth-child(4){
+	width: 65px;
+	height: 60px;
+	left: 50%;
+	animation-duration: 10s;
+}
+
+.burbujas div:nth-child(5){
+	width: 55px;
+	height: 50px;
+	left: 60%;
+	animation-duration: 6.5s;
+}
+
+.burbujas div:nth-child(6){
+	width: 50px;
+	height: 48px;
+	left: 85%;
+	animation-duration: 7.5s;
+}
+
+burbujas div:nth-child(7){
+	width: 55px;
+	height: 39px;
+	left: 95%;
+	animation-duration: 8.5s;
+}
+
+@keyframes animarburbujas {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	3% {
+		width: 30px;
+ 	    height: 27px;
+ 	}
+
+ 	50%{
+ 		margin-left: 20px;
+		opacity: 0.5;
+ 	}
+
+ 	100%{
+ 		transform: rotate(90deg);
+		bottom: 100vh;
+		background: rgb(252, 232, 212);
+
+ 	}		
+}
+
+{
+ 
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+	 position: relative;
+	 width: 300px;
+	 height: 425px;
+	 border: 10px solid #D4A5CB;
+	 margin: 60px auto 0 auto;
+	 box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+     background-image:  url("portada.jpg");
+
+	background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+	background-color: #e6f0e6;
+	animation: flotar 1s linear infinite alternate;
+}
+
+@keyframes flotar {
+	to {
+		margin-top:  15vh;
+	}
+}
+ .card .text-container {
+	 width: 80%;
+	 height: 80%;
+	 margin: auto;
+}
+ .strikethrough {
+	 text-decoration: line-through;
+}
+ .card .text-container #head {
+	 font-family: 'Nobile', sans-serif;
+	 font-size: 1.1em;
+	 margin: 30px auto 60px auto;
+}
+ .card p {
+	 font-size: 1.1em;
+	 line-height: 1.4;
+	 font-family: 'Nobile';
+	 color: #331717;
+	 font-style: italic;
+	 text-align: center;
+	 margin: 25px auto 0px auto;
+}
+ .card .front {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: -10px 0px 0px -10px;
+	 border: 10px solid #D4A5CB;
+	 backface-visibility: hidden;
+	 background-color: #9612eb;
+	/* background-image: url($cover-image);
+	 */
+	 background-size: contain;
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+}
+ .card:hover .front {
+	 transform: perspective(800px) rotateY(-170deg);
+	 background-color: #41718d;
+}
+ .card:hover .back {
+	 transform: perspective(800px) rotateY(-170deg);
+	 box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	 background-color: #d2dcd2;
+}
+
+/*foto de aranzay alin*/
+ .card .back {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 border: 10px solid #D4A5CB;
+	 margin: -10px 0px 0px -10px;
+	 backface-visibility: visible;
+	 filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+	 background-color: #e6f0e6;
+	 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.imgset{
+  z-index: 1;
+  margin-bottom: -215px;
+
+}
+
+.imgset img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	backface-visibility: visible;
+
+
+    
+	
+}
+.imgset img
+{
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+}
+
+button{
+	margin: 10px;
+	padding: 10px 15px;
+	border: none;
+	outline: none;
+	background: #8666AB;
+	color: #E1CE5C;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 300;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+button:active{
+	transform: scale(0.96);
+}
+
+button:hover {
+	color: #fff;
+}
+
+button span{
+	position: absolute;
+	background: #fff;
+	transition: .5s;
+}
+
+/* reponsive*/
+@media screen and (max-width:800px){
+
+
+.text-container p{
+	font-size: 18px;
+}
+
+.button a button{
+font-size: 14px;
+
+}
+}
